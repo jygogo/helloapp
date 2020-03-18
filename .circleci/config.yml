@@ -13,10 +13,12 @@ jobs:
       - python/save-cache
       - run:
           command: 
+            . venv/bin/activate
             make install
           name: install dependencies
       - run:
           command: 
+            . venv/bin/activate
             make lint
           name: run lint
 
