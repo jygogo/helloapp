@@ -12,8 +12,13 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: ./manage.py test
-          name: Test
+          command: 
+            make install
+          name: install dependencies
+      - run:
+          command: 
+            make lint
+          name: run lint
 
 workflows:
   main:
